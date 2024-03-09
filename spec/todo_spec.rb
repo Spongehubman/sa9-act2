@@ -1,4 +1,4 @@
-require "todo_spec"
+require "todo"
 
 RSpec.describe ToDoList do
 
@@ -7,14 +7,15 @@ RSpec.describe ToDoList do
     describe "#add" do
         it "adds a todo to the list" do
             todolist.add("Clean my garage.")
-            expect(todolist.todos).to eql.(["Clean my garage."])
+            expect(todolist.todos).to eql(["Clean my garage."])
         end
     end
 
     describe "#remove" do
         it "removes a todo from the list" do
-            todolist.remove
-            expect(todolist.todos).to eql.([])
+            #todolist.add("Water the garden.")
+            todolist.remove("Clean my garage.")
+            expect(todolist.todos).to eql([])
         end
     end
 
