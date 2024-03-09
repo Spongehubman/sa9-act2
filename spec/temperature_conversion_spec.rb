@@ -11,5 +11,13 @@ RSpec.describe TemperatureConverter do
         end
     end
 
+    describe ".fahrenheit_to_celsius" do
+        it "correctly converts 32°F to 0°C" do
+            expect(TemperatureConverter.fahrenheit_to_celsius(32)).to eq(0)
+        end
 
+        it "correctly converts 212°F to 100°C" do
+            expect(TemperatureConverter.fahrenheit_to_celsius(212)).to eq(100)
+        end
+    end
 end
